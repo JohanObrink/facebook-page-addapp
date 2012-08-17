@@ -7667,10 +7667,44 @@ body {
 }
 ol.steps {
   font-size: 18px;
+  margin: 0;
 }
 ol.steps li {
   list-style: none;
+  margin-bottom: 15px;
 }
 ol.steps li .well {
   margin: 5px 25px;
+  display: none;
+}
+img.photo {
+  max-width: 25px;
+  margin-right: 10px;
+}
+input {
+  width: 90%;
+}
+ul.apps {
+  margin: 5px;
+  font-size: 16px;
+  max-height: 200px;
+  overflow-y: scroll;
+}
+ul.apps li {
+  width: 92%;
+  height: 25px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding: 3px;
+  cursor: pointer;
+}
+ul.apps li.selected {
+  background-color: rgba(149, 185, 150, 0.3);
+}
+#selection-win {
+  display: none;
 }

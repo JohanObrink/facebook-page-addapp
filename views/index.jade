@@ -1,16 +1,4 @@
 
-.navbar.navbar-fixed-top
-  .navbar-inner
-    .container
-      a.brand(href="#")= title
-      .nav-collapse
-        ul.nav
-          li.active
-            a(href="#") Home
-          li
-            a(href="#about") About
-          li
-            a(href="#contact") Contact
 .container
   .page-header
     h1 Facebook page add app
@@ -22,4 +10,30 @@
       |  Connect to Facebook
       .well
         .fb-login-button(data-show-faces="false", data-width="200", data-max-rows="1") Connect to Facebook
+        .fb-profile
+    li
+      i.icon-check-empty
+      |  Select app to add
+      .well
+        form
+          input.app-search(type='text')
+        .apps
+    li
+      i.icon-check-empty
+      |  Select page
+      .well
+        form
+          input.action-url(type='text', disabled='true')
+          a#open-selection-win.btn.btn-primary(disabled='true') Open selection window
 
+script#profile(type='text/x-hogan-template')
+  img.photo(src='//graph.facebook.com/{{id}}/picture')
+  |  {{name}}
+
+script#app(type='text/x-hogan-template')
+  ul.apps
+    {{#data}}
+    li(id='app-{{id}}')
+      img.photo(src='//graph.facebook.com/{{id}}/picture')
+      |  {{name}}
+    {{/data}}
